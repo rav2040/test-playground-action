@@ -13,6 +13,6 @@ jobs:
       - uses: rav2040/test-playground-action@main
         id: one
 
-      - run: echo ${{ steps.one.outputs.foo }} | jq '.foo'
-
       - run: echo ${{ fromJSON(steps.one.outputs.foo).foo }}
+
+      - run: echo '${{ steps.one.outputs.foo }}' | jq '.foo'
