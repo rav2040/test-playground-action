@@ -13,4 +13,4 @@ jobs:
       - uses: rav2040/test-playground-action@main
         id: one
 
-      - run: echo ${{ steps.one.outputs.foo }}
+      - run: echo ${{ steps.one.outputs.foo }} | jq '.foo'
